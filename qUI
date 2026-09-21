@@ -1,0 +1,225 @@
+<!DOCTYPE html>>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuaderno Digital de Química - Samel Morales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .notebook-container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 35px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-school {
+      text-align: center;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #a3cef1;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #00e5ff;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #e0e1dd;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(0, 229, 255, 0.5), transparent);
+      margin-bottom: 25px;
+    }
+
+    /* Datos del estudiante y profesor */
+    .info-card {
+      background: rgba(0, 0, 0, 0.25);
+      border-left: 4px solid #00e5ff;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-item p {
+      font-size: 0.95rem;
+      color: #e0e1dd;
+    }
+
+    .info-item strong {
+      color: #00e5ff;
+    }
+
+    /* Reproductor de música */
+    .audio-section {
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .audio-section p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #a3cef1;
+      font-weight: 500;
+    }
+
+    audio {
+      width: 100%;
+      height: 38px;
+    }
+
+    /* Introducción */
+    .intro-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #e0e1dd;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Botón */
+    .section-title {
+      font-size: 1.1rem;
+      color: #00e5ff;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-folder {
+      background: #00e5ff;
+      color: #0d1b2a;
+      box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+    }
+
+    .btn-folder:hover {
+      background: #00b4d8;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 500px) {
+      .info-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notebook-container">
+    <p class="header-school">Liceo Las Matas De Santa Cruz</p>
+    <h1>🧪 Cuaderno Digital de Química</h1>
+    <p class="subtitle">Portafolio de Clases y Evidencias</p>
+
+    <hr>
+
+    <!-- Ficha de Presentación -->
+    <div class="info-card">
+      <div class="info-item">
+        <p><strong>Estudiante:</strong> Samel Morales Polanco</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Curso:</strong> 5to B</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Profesor:</strong> Jose Cruz</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Asignatura:</strong> Química</p>
+      </div>
+    </div>
+
+    <!-- Reproductor de Música Cristina -->
+    <div class="audio-section">
+      <p>🎵 Música cristiana instrumental de fondo para la revisión</p>
+      <audio controls loop id="bg-audio">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+    </div>
+
+    <!-- Mensaje de Bienvenida -->
+    <div class="intro-text">
+      <p>Bienvenido, Profesor Jose Cruz. En este espacio he organizado la carpeta con los trabajos, evidencias y tareas de la asignatura de Química correspondientes a este período escolar.</p>
+    </div>
+
+    <!-- Enlace a la carpeta de Drive -->
+    <p class="section-title">📂 Acceso a las Tareas:</p>
+    <div class="links-container">
+      <a href="https://drive.google.com/drive/folders/1rx4uTKjvRFr2eiYvZVJf7xO3oatu12-M?usp=sharing" target="_blank" class="btn btn-folder">
+        📁 Abrir Carpeta de Tareas de Química
+      </a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bg-audio');
+      audio.play().catch(() => {
+        console.log("El navegador requiere interacción para iniciar reproducción.");
+      });
+    });
+  </script>
+
+</body>
+</html>
